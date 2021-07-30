@@ -10,9 +10,10 @@ class ArticleController extends AbstractController
     /**
      * @Route("/article", name="article_page")
      * this is controller for article page that will be used for articles, partner organisations, documents and contacts
+     * @return Response
      */
-    public function article()
+    public function article(): Response
     {
         return $this->render('article/article.html.twig');
     }
-}
+};

@@ -10,9 +10,10 @@ class ArticleHeaderController extends AbstractController
     /**
      * @Route("/articleheader", name="article_header")
      * this is controller for article page with header block, that will be used for Ranking and calendar tabs
+     * @return Response
      */
-    public function articleheader()
+    public function articleheader():Response
     {
         return $this->render('article/articleheader.html.twig');
     }
-}
+};
