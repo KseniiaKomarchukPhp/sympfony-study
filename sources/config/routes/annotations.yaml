@@ -6,10 +6,3 @@ kernel:
     resource: ../../src/Kernel.php
     type: annotation
 
-test_action:
-    path: /lucky/test
-    controller: App\Controller\LuckyController::test
-
-number_action:
-    path: /number
-    controller: App\Controller\NumberController::number
