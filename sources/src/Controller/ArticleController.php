@@ -9,6 +9,7 @@ class ArticleController extends AbstractController
 {
     /**
      * @Route("/article", name="article_page")
+     * @author Kseniia Komarchuk <kseniia.komarchuk@gmail.com>
      * this is controller for article page that will be used for articles, partner organisations, documents and contacts
      * @return Response
      */

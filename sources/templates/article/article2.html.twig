@@ -6,10 +6,9 @@
             <div class="col-md-8">
 
                 <article class="blog-post">
-                    <h2 class="blog-post-title">Кубок Федерації з фристайлу на роликових ковзанах.</h2>
-                    <p class="blog-post-meta">27 червня 2021</p>
-
-                    <p>Перший Кубок Федерації за підтримки УФРС складається з 5 етапів та залучив до участі больше 80 нових ліцензованих спортсменів</p>
+                    <h2 class="blog-post-title">{{ post.getName() }}</h2>
+                    <p class="blog-post-meta">{{ post.getPublished()|date('Y-m-d') }}</p>
+                    <p>{{ post.getDescription() }}</p>
                     <pre><code>трішки інший текст</code></pre>
                     <p>і тут ще трішки тексту to be taken from the DB later and will be adapted to the corresponding page </p>
                 </article>
@@ -53,4 +52,5 @@
             </div>
         </div>
     </main>
+
 {% endblock %}

@@ -9,6 +9,7 @@ class ArticleHeaderController extends AbstractController
 {
     /**
      * @Route("/articleheader", name="article_header")
+     * @author Kseniia Komarchuk <kseniia.komarchuk@gmail.com>
      * this is controller for article page with header block, that will be used for Ranking and calendar tabs
      * @return Response
      */

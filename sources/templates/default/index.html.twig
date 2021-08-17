@@ -9,18 +9,17 @@
             </div>
         </div>
 
-
         <div class="row g-5">
             <div class="col-md-8">
-
+                {% for post in posts %}
                 <article class="blog-post">
-                    <h2 class="blog-post-title">Результати третього етапу КФ 2021</h2>
-                    <p class="blog-post-meta">27 червня 2021</p>
-
-                    <p>Тут має бути якийсь текст та таке інше</p>
+                    <h2 class="blog-post-title">{{ post.getName() }}</h2>
+                    <p class="blog-post-meta">{{ post.getPublished()|date('Y-m-d') }}</p>
+                    <p>{{ post.getDescription() }}</p>
                     <pre><code>трішки інший текст</code></pre>
-                    <p>і тут ще тришки тексту та посилання <p class="lead mb-0"><a href="#" class="text-black">Читати далі...</a></p> </p>
+                    <p>і тут ще трішки тексту to be taken from the DB later and will be adapted to the corresponding page </p>
                 </article>
+                {% endfor %}
 
                 <article class="blog-post">
                     <h2 class="blog-post-title">Another blog post</h2>
