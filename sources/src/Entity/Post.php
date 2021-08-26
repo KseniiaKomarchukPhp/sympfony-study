@@ -38,6 +38,11 @@ class Post
     private $published;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $body;
+
+    /**
      * @return integer|null
      */
     public function getId(): ?int
@@ -98,6 +103,18 @@ class Post
     public function setPublished(\DateTimeInterface $published): self
     {
         $this->published = $published;
+
+        return $this;
+    }
+
+    public function getBody(): ?string
+    {
+        return $this->body;
+    }
+
+    public function setBody(string $body): self
+    {
+        $this->body = $body;
 
         return $this;
     }

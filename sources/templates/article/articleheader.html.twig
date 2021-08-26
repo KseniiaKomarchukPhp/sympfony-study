@@ -3,8 +3,8 @@
     <main class="container">
         <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
             <div class="col-md-0 px-0">
-                <h1 class="display-5 fst-italic">This article name will be taken from the DB</h1>
-                <p class="lead my-3">and this description will be taken from the DB and will correspond to the selected page</p>
+                <h1 class="display-5 fst-italic">{{ post.getName() }}</h1>
+                <p class="lead my-3">{{ post.getDescription() }}</p>
             </div>
         </div>
 
@@ -12,12 +12,12 @@
             <div class="col-md-8">
 
                 <article class="blog-post">
-                    <h2 class="blog-post-title">Here will be single long read text with images and links</h2>
-                    <p class="blog-post-meta">27 червня 2021</p>
+                    <h2 class="blog-post-title">{{ post.getName() }}</h2>
+                    <p class="blog-post-meta">{{ post.getPublished()|date('Y-m-d') }}</p>
 
-                    <p>and a lot of text </p>
-                    <pre><code>трішки інший текст</code></pre>
-                    <p> well aligned and styled </p>
+                    <p>{{ post.getBody() }} </p>
+                    <p class="lead mb-0"><a href="{{ path('article_edit', {article: post.getId() }) }}" class="text-black">Редагувати публікацію</a></p>
+
                 </article>
             </div>
 

@@ -5,7 +5,7 @@
             <div class="col-md-0 px-0">
                 <h1 class="display-5 fst-italic">Кубок Федерації з фристайлу на роликових ковзанах.</h1>
                 <p class="lead my-3">Перший Кубок Федерації за підтримки УФРС складається з 5 етапів та залучив до участі більше 80 нових ліцензованих спортсменів</p>
-                <p class="lead mb-0"><a href="{{ path ('article_page') }}" class="text-white fw-bold">Читати далі...</a></p>
+                <p class="lead mb-0"><a href="{{ path('article_show_header', {article: 18}) }}" class="text-white fw-bold">Читати далі...</a></p>
             </div>
         </div>
 
@@ -16,36 +16,9 @@
                     <h2 class="blog-post-title">{{ post.getName() }}</h2>
                     <p class="blog-post-meta">{{ post.getPublished()|date('Y-m-d') }}</p>
                     <p>{{ post.getDescription() }}</p>
-                    <pre><code>трішки інший текст</code></pre>
-                    <p>і тут ще трішки тексту to be taken from the DB later and will be adapted to the corresponding page </p>
+                    <p class="lead mb-0"><a href="{{ path('article_show', {article: post.getId() }) }}" class="text-black">Читати далі...</a></p>
                 </article>
                 {% endfor %}
-
-                <article class="blog-post">
-                    <h2 class="blog-post-title">Another blog post</h2>
-                    <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
-
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-                    <blockquote>
-                        <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
-                    </blockquote>
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-                    <p>And don't forget about tables in these posts:</p>
-                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-                </article>
-
-                <article class="blog-post">
-                    <h2 class="blog-post-title">New feature</h2>
-                    <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
-
-                    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-                    <ul>
-                        <li>First list item</li>
-                        <li>Second list item with a longer description</li>
-                        <li>Third list item to close it out</li>
-                    </ul>
-                    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-                </article>
 
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">

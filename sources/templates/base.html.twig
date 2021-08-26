@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/blog.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/blog.css" rel="stylesheet">
      </head>
     <body>
         <div class="container">
@@ -27,13 +27,14 @@
             <div class="nav-scroller py-1 mb-2">
             <nav class="nav d-flex justify-content-between">
                 <a class="p-2 link-secondary" href="{{ path('index_default') }}">Головна</a>
-                <a class="p-2 link-secondary" href="{{ path ('article_page') }}">Партнерські Організації</a>
-                <a class="p-2 link-secondary" href="{{ path ('get-from-db') }}">Календар змагань Get from DB</a>
-                <a class="p-2 link-secondary" href="{{ path ('article_header') }}">Рейтинг</a>
-                <a class="p-2 link-secondary" href="{{ path ('default_create') }}">Документи Create</a>
+                <a class="p-2 link-secondary" href="{{ path('article_show_header', {article: 19}) }}">Партнерські Організації</a>
+                <a class="p-2 link-secondary" href="{{ path('article_show_header', {article: 20}) }}">Календар змагань</a>
+                <a class="p-2 link-secondary" href="{{ path('article_show_header', {article: 21}) }}">Рейтинг</a>
+                <a class="p-2 link-secondary" href="{{ path('article_show', {article: 22 }) }}">Документи</a>
                 <a class="p-2 link-secondary" href="https://www.instagram.com/tkfreestyleufrs/" target="_blank">Instagram</a>
                 <a class="p-2 link-secondary" href="https://www.facebook.com/TKFreestyleUFRS" target="_blank">Facebook</a>
-                <a class="p-2 link-secondary" href="{{ path ('article_page') }}">Контакти</a>
+                <a class="p-2 link-secondary" href="{{ path('article_show', {article: 23 }) }}">Контакти</a>
+                <a class="p-2 link-secondary" href="{{ path ('article_create') }}">Створити</a>
             </nav>
         </div>
         </div>
