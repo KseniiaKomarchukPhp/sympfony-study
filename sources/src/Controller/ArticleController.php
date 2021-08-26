@@ -28,7 +28,6 @@ class ArticleController extends AbstractController
     public function create(Request $request)
     {
         $article = new Post();
-        $article->setName('new article');
         $article->setPublished(new \DateTime());
 
         $articleForm = $this->createForm(ArticleForm::class, $article);
@@ -78,7 +77,7 @@ class ArticleController extends AbstractController
      * @Route ("/article/show/{article}", name="article_show")
      * @return Response
      */
-    public function getPost(Post $article)
+    public function showPost(Post $article)
     {
         return $this->render('article/show.html.twig', [
             'post' => $article,
@@ -89,7 +88,7 @@ class ArticleController extends AbstractController
      * @Route ("/article/showheader/{article}", name="article_show_header")
      * @return Response
      */
-    public function getPostHeader (Post $article)
+    public function showPostHeader (Post $article)
     {
         return $this->render('article/articleheader.html.twig', [
             'post' => $article,
