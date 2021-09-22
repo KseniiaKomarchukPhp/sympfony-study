@@ -8,8 +8,11 @@
                 <article class="blog-post">
                     <h2 class="blog-post-title">{{ post.getName() }}</h2>
                     <p class="blog-post-meta">{{ post.getPublished()|date('Y-m-d') }}</p>
+                    <p>{{ post.getDescription() }}</p>
                     <p>{{ post.getBody() }}</p>
                     <p class="lead mb-0"><a href="{{ path('article_edit', {article: post.getId() }) }}" class="text-black">Редагувати публікацію</a></p>
+                    <p class="lead mb-0"><a href="{{ path('article_download_html', {article: post.getId() }) }}" class="text-black">Завантажити публікацію у форматі HTML</a></p>
+                    <p class="lead mb-0"><a href="{{ path('article_download_csv', {article: post.getId() }) }}" class="text-black">Завантажити публікацію у форматі CSV</a></p>
 
                 </article>
 

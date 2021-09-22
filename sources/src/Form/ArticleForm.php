@@ -9,8 +9,20 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class ArticleForm extends AbstractType {
+/**
+ * Class ArticleForm
+ * @package App\Form
+ * @author Kseniia Komarchuk <kseniia.komarchuk@gmail.com>
+ */
 
+class ArticleForm extends AbstractType
+{
+
+    /**
+     * @param FormBuilderInterface $builder
+     * @param array                $options
+     * @return void
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('name', TextType::class, [
@@ -28,8 +40,7 @@ class ArticleForm extends AbstractType {
         $builder->add('published', DateType::class, [
             'widget' => 'single_text',
         ]);
-        $builder->add('submit',SubmitType::class);
+        $builder->add('submit', SubmitType::class);
 
     }
-
 }

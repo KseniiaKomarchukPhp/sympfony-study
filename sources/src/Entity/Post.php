@@ -38,6 +38,7 @@ class Post
     private $published;
 
     /**
+     * @var string
      * @ORM\Column(type="text")
      */
     private $body;
@@ -107,12 +108,19 @@ class Post
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getBody(): ?string
     {
         return $this->body;
     }
 
-    public function setBody(string $body): self
+    /**
+     * @param string $body
+     * @return $this
+     */
+    public function setBody($body): self
     {
         $this->body = $body;
 
