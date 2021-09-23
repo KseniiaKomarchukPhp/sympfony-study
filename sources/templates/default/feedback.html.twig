@@ -6,18 +6,36 @@
             <div class="col-md-8">
 
                 <article class="blog-post">
-                    <h2 class="blog-post-title">{{ post.getName() }}</h2>
-                    <p class="blog-post-meta">{{ post.getPublished()|date('Y-m-d') }}</p>
-                    <p>{{ post.getDescription() }}</p>
-                    <p>{{ post.getBody() }}</p>
-                    <p class="lead mb-0"><a href="{{ path('article_edit', {article: post.getId() }) }}" class="text-black">Редагувати публікацію</a>
-                        <a href="{{ path('article_delete', { article: post.getId()}) }}"
-                           onclick="return confirm('Вы уверены?')"
-                        >Видалити [X]</a>
-                    </p>
-                    <p class="lead mb-0"><a href="{{ path('article_download_html', {article: post.getId() }) }}" class="text-black">Завантажити публікацію у форматі HTML</a></p>
-                    <p class="lead mb-0"><a href="{{ path('article_download_csv', {article: post.getId() }) }}" class="text-black">Завантажити публікацію у форматі CSV</a></p>
+                    <h2 class="blog-post-title">Feedback Page</h2>
+                    <p>This is short text that will represent contact information</p>
+                    <p>and phone numbers or links to the social networks</p>
+                    <div class="row">
+                        <div class="col-7">
+                            {{ form_start(form) }}
 
+                            <div class="my-class">
+                                {{ form_label(form.name) }}
+                                {{ form_widget(form.name) }}
+                                {{ form_errors(form.name) }}
+                            </div>
+
+                            <div class="my-class">
+                                {{ form_label(form.contacts) }}
+                                {{ form_widget(form.contacts) }}
+                                {{ form_errors(form.contacts) }}
+                            </div>
+
+                            <div class="my-class">
+                                {{ form_label(form.description) }}
+                                {{ form_widget(form.description) }}
+                                {{ form_errors(form.description) }}
+                            </div>
+
+                            <button type="submit" class="btn btn-outline-primary">Отправить форму</button>
+
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
                 </article>
 
             </div>
