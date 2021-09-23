@@ -54,6 +54,7 @@ class DefaultController extends AbstractController
                 . $data['name'] . " прислал тебе обратную связь \n". $data['description']. "\n свяжись с ним по следующему контакту " . $data['contacts']. "\n удачи!"
             );
             $mailer->send($message);
+            return $this->redirectToRoute('index_default');
         }
         return $this->render('default/feedback.html.twig', [
             'form' => $form->createView(),
